@@ -4,7 +4,9 @@
   "scripts": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
