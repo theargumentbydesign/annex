@@ -1,0 +1,190 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../../node_modules/compass-mixins/lib/_compass.scss";
+
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "abstractions/{YOUR FILE NAME HERE}";
+@import "../../variables/_colours.scss";
+@import "../../variables/_grid.scss";
+
+@import "../../base/_getdown.scss";
+@import "../../base/_links.scss";
+@import "../../base/_type.scss";
+@import "../../base/_navigation.scss";
+@import "../../base/_footer.scss";
+@import "../../base/_hero.scss";
+
+//@import "components/{YOUR FILE NAME HERE}";
+
+ 
+.l-main.l-constrained {
+	padding-top:20px;
+}
+
+.pane-page-tabs {
+	@include grid-span(10,2);
+	float:none;
+}
+
+#columns {
+	@include grid-span(12,1);
+}
+#columns .l-region--col-1 {
+	@include grid-span(10,2);
+	float:none;
+	padding-bottom:40px;
+	
+	.view-tweets {
+		float:left;
+		margin-bottom:20px
+	}
+}
+
+#columns .l-region--col-2 {
+	@include grid-span(10,2);
+	padding-bottom:10px;
+	float:none;
+}
+
+#columns .l-region--col-3 {
+	@include grid-span(10,2);
+	padding-bottom:40px;
+}
+
+.more-content {
+	@include grid-span(10,2);
+	float:none;	
+}
+
+@include breakpoint($tab) {
+
+			#columns .l-region--col-1 {
+				@include grid-span(3,2);
+			}
+
+			#columns .l-region--col-2 {
+				@include grid-span(4,5);
+			}
+
+			#columns .l-region--col-3 {
+				@include grid-span(3,9);
+			}
+}
+
+/* Tweets view */
+
+.view-tweets .views-row {
+	@include font-size(10px);
+	line-height:1.1em;
+	padding:0 0 10px 0;
+	margin-bottom:10px;
+	border-bottom:1px dotted $orange50;
+	float:left;
+	width:100%;
+}
+
+.view-tweets .views-field-profile-image-url {
+	width:25px;
+	float:left;
+	margin-right:10px;
+}
+
+.view-tweets .views-field-text {
+	float:left;
+	margin-left:35px;
+}
+
+.view-tweets .views-field-created-time {
+	margin-left:35px;
+}
+
+.view-tweets .more-link {
+	padding:5px;
+	background:$orange50;
+    font-family:"Futura LT W01 Light";
+	@include font-size(12px);
+	float:right;
+}
+.view-tweets .more-link a {
+	color:white;
+}
+.view-tweets .more-link:hover {
+	background:$orange;
+}
+
+/* Projects view */
+
+.pane-projects {
+}
+
+.pane-projects .flex-caption {
+	position:absolute;
+	bottom:0;
+	background:rgba(0,0,0,0.75);
+	width:100%;
+}
+.pane-projects .flex-caption a {
+	padding:10px;
+	color:white;
+	display:block;
+}
+
+
+/* SEARCH BLOCK */
+
+#search-block-form {
+	float:left;
+	width:100%;
+	padding:20px 0 50px 0;
+	text-align:center;
+}
+
+#search-block-form input.form-text {
+	padding:10px;
+	width:50%;
+	@include font-size(16px);
+    font-family:"Futura LT W01 Light";
+	color:$orange;
+}
+
+#search-block-form input#edit-submit {
+	background:$orange50;
+	color:white;
+	border-radius: none;
+	border:none;
+	padding:10px;
+	@include font-size(16px);
+    font-family:"Futura LT W01 Light";	
+}
+
+#search-block-form input#edit-submit:hover {
+	background:$orange;
+	cursor: pointer;
+}
+
+/* Flexslider 
+
+#flexslider-1 {
+	
+	
+	.flex-nav-next,
+	.flex-nav-prev {
+	line-height:3rem;
+	padding:0 20px;
+	}
+	
+	.title {
+		width:100%;
+		text-align:center;
+		@include font-size(20px);
+	}
+}
+*/
+
+
+
+
+
+

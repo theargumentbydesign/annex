@@ -18,6 +18,23 @@ var sass_config = {
     'node_modules/compass-mixins/lib/'
   ]
 };
+
+
+ 
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+		server: {
+            baseDir: "./",
+        }
+    });
+
+    gulp.watch("./sass/**/*.scss", ['sass']);
+    gulp.watch("./css/**/*.css").on('change', browserSync.reload);
+    gulp.watch("./js/**/*.js", ['uglify']).on('change', browserSync.reload);
+});
+
  
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
@@ -29,22 +46,18 @@ gulp.task('sass', function () {
       browsers: ['last 2 version']
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))  
+	.pipe(browserSync.stream());
+
 });
 
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        injectChanges: true,
-        proxy: "127.0.0.1/foodsource"
-    });
-    gulp.watch("./sass/**/*.scss", ['sass']);
-    gulp.watch("./css/**/*.css").on('change', browserSync.reload);
-    gulp.watch("./js/**/*.js", ['uglify']).on('change', browserSync.reload);
-});
+
 
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['sass']);
 }); 
 
 gulp.task('default', ['watch']);
+gulp.task('default', ['serve']);
+

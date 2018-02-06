@@ -1,6 +1,89 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../node_modules/compass-mixins/lib/_compass.scss";
+  
+
 // Import variables, abstractions, base styles and components.
 // Uncomment the next lines and adjust them to your needs.
-//@import "variables/{YOUR FILE NAME HERE}";
 //@import "abstractions/{YOUR FILE NAME HERE}";
-//@import "base/{YOUR FILE NAME HERE}";
+@import "variables/_colours.scss";
+@import "variables/_grid.scss";
+
+@import "base/_getdown.scss";
+@import "base/_links.scss";
+@import "base/_fonts.scss";
+@import "base/_type.scss";
+@import "base/_navigation.scss";
+@import "base/_footer.scss";
+@import "base/_hero.scss";
+
 //@import "components/{YOUR FILE NAME HERE}";
+
+
+/* MAINTENANCE */
+
+.maintenance-page {
+	
+	.site-logo {
+		width:350px;
+		margin:0 auto;
+		display:block;
+	}
+
+	.site-name {
+		text-align: center;
+		margin:0 auto;
+		display:block;
+	}
+	.l-header {
+		height:220px;
+	}
+}
+
+img {
+	width:100%;
+	height:auto;
+}
+
+.pane-page-logo {
+	@include grid-span(12,1);
+	float:none;
+}
+#navigation {
+	@include grid-span(12,1);
+	float:none;
+}
+.pane-page-content {
+	padding-bottom:50px;
+}
+
+
+@include breakpoint($tab) {
+	.pane-page-logo {
+		@include grid-span(4,1);
+	}
+	#navigation {
+		@include grid-span(8,5);
+	}	
+}
+
+
+@include breakpoint($desk) {
+	.pane-page-logo {
+		@include grid-span(3,1);
+	}
+	#navigation {
+		@include grid-span(9,4);
+	}	
+}
+
+.pane-page-tabs {
+	@include grid-span(10,2);
+	float:none;
+	margin-top:20px;
+}
+
+.twitter_signin {
+	width:130px;
+}

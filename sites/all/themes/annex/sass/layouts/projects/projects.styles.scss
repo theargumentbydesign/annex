@@ -1,0 +1,197 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../../node_modules/compass-mixins/lib/_compass.scss";
+
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "abstractions/{YOUR FILE NAME HERE}";
+@import "../../variables/_colours.scss";
+@import "../../variables/_grid.scss";
+
+@import "../../base/_getdown.scss";
+@import "../../base/_links.scss";
+@import "../../base/_type.scss";
+@import "../../base/_navigation.scss";
+@import "../../base/_footer.scss";
+@import "../../base/_hero.scss";
+
+//@import "components/{YOUR FILE NAME HERE}";
+
+
+
+.l-main.l-constrained {
+	padding-top:20px;
+}
+
+.l-highlighted-wrapper {
+	padding-top:0;
+}
+
+.pane-page-tabs {
+	@include grid-span(10,2);
+	float:none;
+}
+
+
+/* structure */
+
+.l-main {
+	@include grid-span(12,1);
+	float:none;
+}
+#content {
+	@include grid-span(12,1);
+	clear:both;
+	padding-bottom:50px;
+}
+
+
+.l-content {
+	@include grid-span(10,2)
+}
+.l-region--sidebar-first {
+	display:none;
+}	
+
+		@include breakpoint($tab) {
+			.l-content {
+				@include grid-span(8,4);
+				
+			}
+			.l-region--sidebar-first {
+				@include grid-span(2,2);
+				display:inherit;
+			}	
+		}
+
+
+/* HISTORY & CULTURES */
+
+.history-cultures {
+	
+	.l-header {border-bottom:3px solid $purple;}
+	
+	h1, h2, h3, h4, h5, h6,
+	a:link, a:visited, a:hover, a:active {color:$purple;}
+	#superfish-1 li ul {background-color:$purple;}
+	
+	h1 {margin:30px 0 50px;}
+	
+	#superfish-1 li.active-trail a {color:$purple;}
+	#superfish-1-accordion {background-color:$purple10;}
+	.sf-accordion-toggle {background-color:$purple;}
+	#superfish-1-accordion li:hover {background:$purple25;}	
+	
+}
+
+/* SPECIES & SPACES */
+
+.species-spaces {
+
+	.l-header {border-bottom:3px solid $green;}
+	
+	h1, h2, h3, h4, h5, h6,
+	a:link, a:visited, a:hover, a:active {color:$green;}
+	#superfish-1 li ul {background-color:$green;}
+	
+	h1 {margin:30px 0 50px;}
+	
+	#superfish-1 li.active-trail a {color:$green;}
+	
+	#superfish-1-accordion {background-color:$green10;}
+	.sf-accordion-toggle {background-color:$green;}
+	#superfish-1-accordion li:hover {background:$green25;}	
+	
+}
+
+
+/* MARKETS AND MATERIALS */
+
+.markets-materials {
+	.l-header {border-bottom:3px solid $yellow;}
+
+	h1, h2, h3, h4, h5, h6,
+	a:link, a:visited, a:hover, a:active {color:$yellow;}
+	#superfish-1 li ul {background-color:$yellow;}
+	
+	h1 {margin:30px 0 50px;}
+	
+	#superfish-1 li.active-trail a {color:$yellow;}
+	
+	#superfish-1-accordion {background-color:$yellow10;}
+	.sf-accordion-toggle {background-color:$yellow;}
+	#superfish-1-accordion li:hover {background:$yellow25;}	
+	
+}
+
+
+/* PEOPLE AND PROFESSIONS */
+
+.people-professions {
+
+	.l-header {border-bottom:3px solid $red25;}
+	
+	h1, h2, h3, h4, h5, h6,
+	a:link, a:visited, a:hover, a:active {color:$red;}
+	#superfish-1 li ul {background-color:$red;}
+	
+	h1 {margin:30px 0 50px;}
+	
+	#superfish-1 li.active-trail a {color:$red;}
+	
+	#superfish-1-accordion {background-color:$red10;}
+	.sf-accordion-toggle {background-color:$red;}
+	#superfish-1-accordion li:hover {background:$red25;}	
+}
+
+
+/* ENGAGEMENT & ENCOUNTERS */
+
+.engagement-encounters {
+
+	h1, h2, h3, h4, h5, h6,
+	a:link, a:visited, a:hover, a:active {color:$blue;}
+	#superfish-1 li ul {background-color:$blue;}
+	
+	h1 {margin:30px 0 50px;}
+	
+	#superfish-1 li.active-trail a {color:$blue;}
+	
+	#superfish-1-accordion {background-color:$blue10;}
+	.sf-accordion-toggle {background-color:$blue;}
+	#superfish-1-accordion li:hover {background:$blue25;}	
+
+}
+
+
+/* COLLABORATION & COMMUNICATION */
+
+.collab-communication {
+
+	h1, h2, h3, h4, h5, h6,
+	a:link, a:visited, a:hover, a:active {color:$pink;}
+	#superfish-1 li ul {background-color:$pink;}
+	
+	h1 {margin:30px 0 50px;}
+	
+	#superfish-1 li.active-trail a {color:$pink;}
+	#superfish-1-accordion {background-color:$pink10;}
+	.sf-accordion-toggle {background-color:$pink;}
+	#superfish-1-accordion li:hover {background:$pink25;}	
+}
+
+.pane-menu-menu-collaboration-submenu ul.menu,
+.pane-menu-menu-collaboration-submenu li.leaf {
+	list-style:none;
+	list-style-image: none;
+}
+
+.pane-menu-menu-collaboration-submenu li.leaf {
+	padding:10px;
+	border-bottom:1px solid $pink25;
+}
+.pane-menu-menu-collaboration-submenu li.leaf:hover {
+	background:$pink10;
+	border-bottom:1px solid $pink;
+}

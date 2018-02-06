@@ -1,0 +1,262 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../../node_modules/compass-mixins/lib/_compass.scss";
+
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "abstractions/{YOUR FILE NAME HERE}";
+@import "../../variables/_colours.scss";
+@import "../../variables/_grid.scss";
+
+@import "../../base/_getdown.scss";
+@import "../../base/_links.scss";
+@import "../../base/_type.scss";
+@import "../../base/_navigation.scss";
+@import "../../base/_footer.scss";
+@import "../../base/_hero.scss";
+
+//@import "components/{YOUR FILE NAME HERE}";
+ 
+
+.page-pac {
+	#hero {
+		height:100px;
+	}
+	.l-header {
+		border-bottom:3px solid $orange25;
+	}
+	.l-content {
+		@include grid-span(10,2);
+	}
+
+}
+
+
+.l-highlighted-wrapper{
+	padding-top:20px;
+}
+
+.page-about-people .l-main.l-constrained,
+.l-main.l-constrained {
+	padding-top:20px;
+	@include clearfix;
+}
+
+.page-about-people .l-content {
+	margin-top:20px;
+	@include grid-span(10,2);
+}
+
+@include breakpoint($tab) {
+		.l-main.l-constrained {
+		padding-top:170px;
+	}
+	
+	.section-projects .l-main.l-constrained {
+		padding-top:220px;
+	}
+	
+		.page-about-people .l-main.l-constrained {
+		padding-top:0;
+	}
+}
+.contextual-links-region {
+	position:inherit;
+}
+
+
+/* Projects list view */
+
+
+
+/* Mobile */
+.views-row {
+	float:left;
+	width:80%;
+	margin:0 10% 30px 0;
+}
+
+
+h1.title {
+	padding-top:5%;
+	text-align: center;
+	font-size:2em;
+}	
+
+@include breakpoint($tab) {
+	
+			.view-projects {
+
+				.views-row {
+					float:left;
+					width:20%;
+					margin:0 5% 30px 0;
+				}	
+
+					.views-row:hover {
+				}
+
+				h1.title {
+					padding-top:25%;
+					text-align: center;
+					font-size:1em;
+				}	
+
+					.views-row-1 h1.title a {
+					color:$purple;
+					}		
+					.views-row-2 h1.title a {
+					color:$green;
+					}
+					.views-row-3 h1.title a {
+					color:$yellow;
+					}
+					.views-row-4 h1.title a {
+					color:$red;
+					}
+					.views-row-5 h1.title a {
+					color:$blue;
+					}
+					.views-row-6 h1.title a {
+					color:$pink;
+					}
+
+					/*Adjust the margins to get three in a row */
+					.views-row-1, .views-row-4 {
+					margin-left:10%
+					}
+					
+					.views-row-3, .views-row-6 {
+					margin-right:10%
+					}
+
+
+					.views-row-1:hover {
+					background-color:$purple10;
+					}
+					.views-row-2:hover {
+					background-color:$green10;
+					}
+					.views-row-3:hover {
+					background-color:$yellow10;
+					}
+					.views-row-4:hover {
+					background-color:$red10;
+					}
+					.views-row-5:hover {
+					background-color:$blue10;
+					}
+					.views-row-6:hover {
+					background-color:$pink10;
+					}
+
+				.projimg {
+					float:left;
+					background:white;
+					padding:0;
+					margin-bottom:20px;
+					width:100%;
+
+				}
+
+			}
+
+}
+
+
+
+/* Blogs list view */
+
+.view-blogs {
+	
+	.views-row {
+		float:left;
+		width:100%;
+		margin:20px 0;
+		padding-bottom:20px;
+		border-bottom:1px solid #efefef;
+	}
+	.views-row-last {
+		border-bottom:none;
+	}
+	
+	.field--name-post-date {
+	    font-family:"Futura LT W01 Book";
+		padding:10px 0;
+	
+	}
+	
+	.group-left {
+		width:20%;
+		margin-right:5%;
+	}
+	.group-right {
+		width:75%;
+	}
+		
+}
+
+
+/* The team list view */
+
+
+.view-the-team {
+	
+	.views-row {
+		float:left;
+		width:100%;
+		margin:20px 0;
+		padding-bottom:20px;
+		border-bottom:1px solid #efefef;
+	}
+	.views-row-last {
+		border-bottom:none;
+	}
+	
+	.views-field-view-user {
+		padding:0 0 10px 0;
+		border-bottom:2px solid $orange50;
+		margin-bottom:10px;
+	    font-family:"Futura LT W01 Book";
+		float:left;
+		clear:right;
+		@include font-size(18px); 
+		
+	}
+	
+	.views-field-field-biography {
+		clear:left;
+	}
+	.field--name-post-date {
+	    font-family:"Futura LT W01 Book";
+		padding:10px 0;
+	
+	}
+	
+	.group-left {
+		width:20%;
+		margin-right:5%;
+	}
+	.group-right {
+		width:75%;
+	}
+		
+}
+
+
+/* PAC list view */
+
+.view-pac .views-row {
+		float:left;
+		width:100%;
+		margin:20px 0;
+		padding-bottom:20px;
+		border-bottom:1px solid #efefef;
+	}
+
+.view-pac .view-footer {
+	float:left;
+	width:100%;
+	@include font-size(12px);
+}

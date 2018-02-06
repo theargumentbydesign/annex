@@ -1,0 +1,75 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../../node_modules/compass-mixins/lib/_compass.scss";
+
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "abstractions/{YOUR FILE NAME HERE}";
+@import "../../variables/_colours.scss";
+@import "../../variables/_grid.scss";
+
+@import "../../base/_getdown.scss";
+@import "../../base/_links.scss";
+@import "../../base/_type.scss";
+@import "../../base/_navigation.scss";
+@import "../../base/_footer.scss";
+@import "../../base/_hero.scss";
+
+//@import "components/{YOUR FILE NAME HERE}";
+ 
+.l-main.l-constrained {
+	padding:20px 0 50px 0;
+
+}
+
+.not-logged-in.page-user .l-main.l-constrained {
+	padding:120px 0 50px 0;
+
+}
+
+
+.l-highlighted-wrapper{
+	padding-top:20px;
+}
+
+.l-content {
+	@include grid-span(10,2);
+	float:none;
+}
+
+@include breakpoint($wide) {
+	.l-content {
+	width:1020px;
+	float:none;
+}
+		
+}
+
+
+/* SEARCH FORM */
+
+#search-form {
+	
+	label {
+	    font-family:"Futura LT W01 Book";
+	}
+	
+	input {
+		padding:10px;
+		width:50%;
+	    font-family:"Futura LT W01 Book";
+		margin:20px 0;
+		@include font-size(16px);
+	}
+	
+	input#edit-submit {
+		width:200px;
+	}
+	
+	#edit-advanced {
+		@include font-size(16px);
+		padding:20px 0;
+	    font-family:"Futura LT W01 Book";
+	}
+}

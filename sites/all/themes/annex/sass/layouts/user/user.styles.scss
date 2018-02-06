@@ -1,0 +1,80 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "../../../node_modules/compass-mixins/lib/_compass.scss";
+
+// Import variables, abstractions, base styles and components.
+// Uncomment the next lines and adjust them to your needs.
+//@import "abstractions/{YOUR FILE NAME HERE}";
+@import "../../variables/_colours.scss";
+@import "../../variables/_grid.scss";
+
+@import "../../base/_getdown.scss";
+@import "../../base/_links.scss";
+@import "../../base/_type.scss";
+@import "../../base/_navigation.scss";
+@import "../../base/_footer.scss";
+@import "../../base/_hero.scss";
+
+//@import "components/{YOUR FILE NAME HERE}";
+ 
+.l-main.l-constrained {
+	padding:180px 0 50px 0;
+	@include clearfix;
+}
+
+
+.l-highlighted-wrapper{
+	padding-top:0;
+}
+
+.l-content {
+	@include grid-span(10,2);
+}
+
+@include breakpoint($tab) {
+	.l-content {
+		@include grid-span(6,2);
+	}
+	.l-region--sidebar-second {
+		@include grid-span(3,9);
+	}
+}
+
+
+
+.field--name-field-title,
+.field--name-field-name,
+.field--name-field-last-name {
+	float:left;
+	margin:0 8px 10px 0;
+    font-family:"Futura LT W01 Book";
+	@include font-size(18px);
+}
+
+.field--name-field-institution  {
+    font-family:"Futura LT W01 Book";
+	@include font-size(18px);
+	margin-bottom: 10px;
+	float:left;
+	width:100%;
+}
+.field--name-field-biography  {
+	float:left;
+	width:100%;	
+}
+
+
+/* SIDEBAR VIEW FIELDS */
+
+.view-the-team .views-field-mail {
+	font-family:"Futura LT W01 Book";
+	width:100%;
+	background:$orange10;
+	padding:20px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.view-the-team .views-field-mail:hover {
+	background:$orange25;
+}

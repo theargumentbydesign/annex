@@ -1,0 +1,125 @@
+/* logo pane */
+#logo {
+	width:100%;
+	display:block;
+	padding-top:15px;
+	text-align: center;
+}
+#logo img {
+	min-width:50%;
+	max-width:60%;
+	margin:0 auto;
+}
+
+@include breakpoint($tab) {	
+	#logo {
+	width:350px;
+	display:block;
+	padding-top:15px;
+	margin:0;	
+}
+	
+	
+#logo img {
+	min-width:90%;
+	max-width:100%;
+}
+}
+
+
+/* MOBILE SUPERFISH */
+
+.sf-accordion-toggle {
+	padding:10px 0 25px 0;
+	background-color:$orange;
+}
+
+.sf-accordion-toggle span {
+	float:left;
+	width:100%;
+	text-align:center;
+	color:white;
+    font-family:"Frutiger LT W01_45 Ligh1475730";
+	text-transform: uppercase;
+	padding-bottom:10px;
+}
+
+#superfish-1-accordion {
+	background-color:$orange10;	
+}
+
+ul#superfish-1-accordion li {
+	text-align: center;
+	padding:10px 0;
+	@include font-size(12px);
+}
+
+ul#superfish-1-accordion li:hover {
+	background:$orange10;
+}
+
+
+/* Superfish navigation main menu */
+
+#superfish-1 {
+	width:100%;
+	float:left;
+	padding:80px 20px 0 0;
+}
+#superfish-1 li {
+	float:right;
+	margin-right:0;
+	width:auto;
+	padding:10px 25px;
+	@include font-size(14px);
+	transition:background 300ms ease-in;
+}
+
+
+#superfish-1 li.first {
+	margin-right:20px;
+}
+
+		#superfish-1 li:hover {
+			background:rgba(255,255,255,0.50);
+			transition:background 300ms ease-in;
+		}
+		#superfish-1 li.active-trail {
+			background:rgba(255,255,255,0.80);
+			transition:background 300ms ease-in;
+		}
+
+#superfish-1 li ul {
+	background:$orange;
+	position:fixed;
+	width:100%;
+	margin-top: 105px;
+}
+
+.logged-in #superfish-1 li ul {
+	margin-top: 135px;
+}
+
+
+				@include breakpoint ($tab){
+					#superfish-1 li ul li {
+					padding:10px;
+					@include font-size(11px);
+					transition:font-size 300ms ease-in;
+					transition:padding 300ms ease-in;
+	
+					}
+				}
+
+				@include breakpoint ($desk){
+					#superfish-1 li ul li {
+					padding:10px 25px;
+					@include font-size(14px);
+					}
+				}
+
+
+#superfish-1 li ul li a {
+	color:white;
+}
+	#superfish-1 li.active-trail a {color:$orange;}

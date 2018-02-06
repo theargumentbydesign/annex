@@ -1,0 +1,139 @@
+/* Set footer styles */
+
+.l-region--footer {
+	@include grid-span(12,1);
+	padding-top:40px;
+}
+
+.l-region--footer p {
+	@include font-size(12px);
+	line-height:1.25em;
+}
+
+.l-region--footer h2 {
+	margin-top:10px;
+	@include font-size(14px);
+	line-height:1.25em;
+}
+
+
+#recent-content {
+	@include grid-span(10,2);
+	@include font-size(12px);
+	border-bottom:1px solid #ddd;
+}
+#footer-contact {
+	@include grid-span(10,2);
+	clear:both;
+	border-bottom:1px solid #ddd;
+}
+
+#footer-inst {
+	@include grid-span(10,2);
+	clear:both;
+	border-bottom:1px solid #ddd;
+	text-align: center;
+		
+		img {
+			padding:0 0 40px;
+			float:left;
+			width:33%;
+			margin:0 33%;
+		}
+	
+		h2 {
+			text-align: left;
+		}	
+}
+
+#social-media {
+	@include grid-span(10,2);
+	clear:both;
+	
+}
+@include breakpoint($tab) {
+	
+				.l-region--footer p {
+					@include font-size(12px);
+					line-height:1.25em;
+				}
+
+				.l-region--footer h2 {
+					@include font-size(14px);
+					line-height:1.25em;
+				}
+
+
+
+				#recent-content {
+				@include grid-span(2,2);
+				border-bottom:none;
+			}
+				#footer-contact {
+				@include grid-span(2,4);
+					border-bottom:none;
+			}
+				#footer-inst {
+				@include grid-span(6,6);
+					border-bottom:none;
+			}
+				#footer-inst p {
+				width:200px;
+			}
+				#footer-inst img {
+				width:70%;
+				margin:0;
+			}
+				#social-media {
+				@include grid-span(2,10);
+			}
+}
+
+
+
+#social-media {
+	ul li {
+		float:left;
+		clear:none;;
+		margin:5px 20px 5px 0;
+		width:40px;
+		height:33px;
+		padding-top:12px;
+		padding-left:5px;
+		text-align: center;
+		@include font-size(14px);
+		color:$blue;
+		@include border-radius(50%);
+		background:$blue25;
+	}
+		ul li:hover {
+		background:$blue50;
+	}
+	
+	@include breakpoint($tab) {
+		ul li {
+			clear:both;
+		}
+	}
+
+
+
+}
+
+
+.view-recent-content {
+	   font-family:"Frutiger LT W01_45 Ligh1475730";
+
+	.views-row {
+		float:left;
+		width:100%;
+		margin:5px 0;
+		padding:7px 0;
+	}
+	.views-field-title {
+		@include font-size(16px);
+		padding:7px 0;
+	}
+	
+	
+}
