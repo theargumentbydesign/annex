@@ -281,6 +281,16 @@ ul#superfish-1-accordion li:hover {
   #footer-inst h2 {
     text-align: left; }
 
+#footer-fund {
+  width: 83.05085%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 8.47458%;
+  clear: none;
+  clear: both;
+  border-bottom: 1px solid #ddd;
+  text-align: center; }
+
 #social-media {
   width: 83.05085%;
   float: left;
@@ -313,7 +323,7 @@ ul#superfish-1-accordion li:hover {
     clear: none;
     border-bottom: none; }
   #footer-inst {
-    width: 49.15254%;
+    width: 15.25424%;
     float: left;
     margin-right: -100%;
     margin-left: 42.37288%;
@@ -323,6 +333,17 @@ ul#superfish-1-accordion li:hover {
     width: 200px; }
   #footer-inst img {
     width: 70%;
+    margin: 0; }
+  #footer-fund {
+    width: 15.25424%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 59.32203%;
+    clear: none;
+    border-bottom: none;
+    text-align: left; }
+  #footer-fund img {
+    width: 50%;
     margin: 0; }
   #social-media {
     width: 15.25424%;
@@ -668,5 +689,7 @@ ul#superfish-1-accordion li:hover {
 	}
 }
 */
+.flexslider {
+  box-shadow: none; }
 
 /*# sourceMappingURL=homepage.styles.css.map */

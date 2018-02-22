@@ -46,6 +46,13 @@
 		}	
 }
 
+#footer-fund {
+	@include grid-span(10,2);
+	clear:both;
+	border-bottom:1px solid #ddd;
+	text-align: center;
+}
+
 #social-media {
 	@include grid-span(10,2);
 	clear:both;
@@ -73,21 +80,36 @@
 				@include grid-span(2,4);
 					border-bottom:none;
 			}
+
 				#footer-inst {
-				@include grid-span(6,6);
+				@include grid-span(2,6);
 					border-bottom:none;
 			}
-				#footer-inst p {
+			#footer-inst p {
 				width:200px;
 			}
 				#footer-inst img {
 				width:70%;
 				margin:0;
 			}
-				#social-media {
+			#footer-fund {
+			@include grid-span(2,8);
+				border-bottom:none;
+				text-align: left;
+			}
+				#footer-fund img {
+				width:50%;
+				margin:0;
+			}	
+	
+	
+	
+			#social-media {
 				@include grid-span(2,10);
 			}
+	
 }
+
 
 
 
